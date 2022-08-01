@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-form',
@@ -6,10 +9,57 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  @Output() onHideForm = new EventEmitter<boolean>();
+  emailForm! : FormGroup;
+  submitted = false;
+  formField = true;
+  successMessage = false;
 
-  constructor() { }
+  // private sendForm!: AngularFirestoreCollection<any>;
+
+  constructor(
+    private formBuilder: FormBuilder,
+   // private firestore: AngularFirestore,
+    ) { }
 
   ngOnInit(): void {
+    this.emailForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      number: ['', Validators.required],
+      aboutClient: ['', 
+      [
+        Validators.required,
+        Validators.maxLength(300)
+      ]
+    ],
+      reason: ['', Validators.required],
+    });
+
+   // this.sendForm = this.firestore.collection('enquiry');
+   
   }
+
+  hideForm() {
+    this.onHideForm.emit(false);
+  }
+
+  onSubmit(/*value:any*/) {
+ //   this.submitted = true;
+ //   if(this.emailForm.invalid) {
+    this.formField = false;
+    this.successMessage = true;
+    console.log(/*value*/);
+   // }
+
+   // console.log(/*value*/);
+  /*  this.sendForm.add(value)
+      .then(res => {
+        this.formField = false;
+        this.successMessage = true;
+      })
+      .catch(err => {
+        console.log(err);
+      }) */
+  } 
 
 }

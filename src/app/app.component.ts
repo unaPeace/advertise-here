@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'advertise-here';
+  
+  topScroll(){
+    window.scroll(0,0);
+  }
+
+  constructor() {}
+  ngOnInit(): void {}
 }

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  contactForm = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showForm() {
+    this.contactForm = true;
   }
 
 }

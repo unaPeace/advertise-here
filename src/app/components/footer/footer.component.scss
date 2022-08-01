@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url(../../../assets/fonts/Montserrat.ttf) format("truetype");
+}
+
+* {
+    font-family: "Montserrat";
+}
+
+.footer-container {
+    width: 100%;
+    min-height: 50vh;
+    background-color: black;
+}
+
+.footer {
+    max-width: 900px;
+    text-align: center;
+}
+
+.footer-list {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+a {
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    transition: all 1s ease;
+    p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+
+a:hover {
+    color: #FF4D3B;
+    div.underline {
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: 0;
+        background-color: #FF4D3B;
+    }
+}
+
+.contact-wrap {
+    padding: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/img/nav/wavy.svg'), linear-gradient(180deg, #393939, #646464);
+    background-size: cover;
+    background-repeat: none;
+}
+
+.contacts {
+    text-align: center;
+}
+
+button {
+    position: relative;
+    top: 30px;
+    margin: 30px;
+    background-color: #ff4633;
+    border: none;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #FFFFFF;
+    height: 72px;
+    width: 230px;
+    text-align: center;
+    transition: background-color 500ms cubic-bezier(.789, .159, .25, 1), color 200ms cubic-bezier(.789, .159, .25, 1);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: #ff7667;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:hover {
+    background-color: #fff;
+    color: #6b6b6b;
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.alt-btn {
+    background-color: transparent;
+    border: 3px solid white;
+}
+
+h2 {
+    color: white;
+    font-size: 48px;
+}
+
+
+.footer-wrap {
+    position: relative;
+    left: 0;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+}

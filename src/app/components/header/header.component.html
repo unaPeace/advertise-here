@@ -1,1 +1,69 @@
-<p>header works!</p>
+<div class="hero">
+    <div class="hero-content">
+        <div>
+            <a routerLink="/" class="logo-wrap">
+                <img src="../../../assets/img/nav/logo.webp"
+                alt="advertise here logo" 
+                class="nav-logo" />
+            </a>
+        </div>
+        <img src="../../../assets/img/nav/hamburger_menu.webp"
+        (click)="showMenu()"
+        alt="options" 
+        class="menu-icon" />
+        <div class="web-menu">
+            <a routerLink="signage">
+                <p class="page-links">signage</p>
+                <div class="underline"></div>
+            </a>
+            <a routerLink="branding">
+                <p class="page-links">branding</p>
+                <div class="underline"></div>
+            </a>
+            <a routerLink="digital">
+                <p class="page-links">digital</p>
+                <div class="underline"></div>
+            </a>
+            <a routerLink="case-study">
+                <p class="page-links">our work</p>
+                <div class="underline"></div>
+            </a>
+            <a href="" (click)="showForm()">
+                <p class="page-links">contacts</p>
+                <div class="underline"></div>
+            </a>
+        </div>
+        <div *ngIf="mobileMenu" class="mobile-menu">
+            <img src="../../../assets/img/nav/close.webp"
+            (click)="hideMenu()"
+            alt="close" 
+            class="exit-btn" />
+            <div class="mobile-link">
+                <a routerLink="signage"
+                (click)="hideMenu()">
+                    <p class="page-links">signage</p>
+                    <div class="underline"></div>
+                </a>
+                <a routerLink="branding"
+                (click)="hideMenu()">
+                    <p class="page-links">branding</p>
+                    <div class="underline"></div>
+                </a>
+                <a routerLink="digital"
+                (click)="hideMenu()">
+                    <p class="page-links">digital</p>
+                    <div class="underline"></div>
+                </a>
+                <a routerLink="case-study"
+                (click)="hideMenu()">
+                    <p class="page-links">our work</p>
+                    <div class="underline"></div>
+                </a>
+                <a href="" (click)="menuForm()">
+                    <p class="page-links">contacts</p>
+                    <div class="underline"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url(../../../assets/fonts/Montserrat.ttf) format("truetype");
+}
+
+* {
+    font-family: "Montserrat";
+}
+
+.hero-comp {
+    width: 100vw;
+    z-index: 1000;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    transition: 0.03 linear;
+}
+
+.no-fixed {
+    position: static;
+    top: -50px;
+    transition: 0.03 linear;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #EEE;
+    overflow-x: hidden;
+}
+
+// Landing Section
+
+.landing-one {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, #393939 28%, #6b6b6b);
+}
+
+.landing-two {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+}
+
+.mission-gif {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6em;
+    width: 90%;
+}
+
+.scroll-icon {
+    margin: 0px;
+    width: 23px;
+}
+
+.contact-wrap {
+    width: 100%;
+    padding-left: 90px;
+}
+
+button {
+    position: relative;
+    top: 30px;
+    background-color: #ff4633;
+    border: none;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #FFFFFF;
+    height: 72px;
+    width: 180px;
+    text-align: center;
+    transition: background-color 500ms cubic-bezier(.789, .159, .25, 1), color 200ms cubic-bezier(.789, .159, .25, 1);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: #ff7667;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:hover {
+    background-color: #fff;
+    color: #6b6b6b;
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.img-wrap {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+.img-wrap img {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 30px;
+    width: 100%;
+}
+
+.heading {
+    margin-top: 20vh;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+span {
+    color: #ff4633;
+}
+
+// About Section
+
+.about-section {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.content-wrap {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-text, .about-img-wrap {
+    padding: 3em;
+    width: 40vw;
+}
+
+.about-img-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-img {
+    width: 80%;
+    border-radius: 12px;
+}
+
+.about-icon {
+    height: 90px;
+}
+
+.service-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+p {
+    margin: 30px;
+    color: #6b6b6b;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+h3 {
+    margin: 30px;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.content-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.icons-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    width: 30vw;
+}
+
+.icons-wrap p {
+    margin-top: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h4 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.page-link {
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    color: #ff4633;
+}
+
+.arrow {
+    width: 120px;
+    position: relative;
+    right: -30px;
+    transition: all 0.8s
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.link-wrap {
+    position: relative;
+    right: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}

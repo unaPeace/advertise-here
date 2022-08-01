@@ -1,1 +1,197 @@
-<p>home works!</p>
+<div class="container">
+    <app-header (scroll)="onScroll" [ngClass]="navBarFixed? 'fixed': 'no-fixed'" class="hero-comp"></app-header>
+    <div id="home-top" class="landing-section">
+        <div class="landing-one">
+            <img src="../../../assets/img/home/mission.webp" 
+            alt="we are passionate about transforming brands" 
+            class="mission-gif" />
+            <div class="contact-wrap">
+                <button >get in touch</button>
+            </div>
+            <img src="../../../assets/img/nav/mouse.webp" 
+            alt="scroll icon" 
+            class="scroll-icon" />
+        </div>
+        <div class="landing-two">
+            <div class="heading">
+                <h1>THE <span>FUTURE</span> OF ADVERTISING</h1>
+            </div>
+            <div class="img-wrap">
+                <img src="../../../assets/img/home/billboard_mockup.webp" 
+                sizes="90vw" 
+                alt="billboard" />
+            </div>
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="content-wrap">
+            <div class="about-text">
+                <p>
+                    The world has become flooded with 1000s of brands and advertisements. Making sure that your company is seen in the maelstrom of marketing is a tough challenge.
+                </p>
+                <p>
+                    At Advertise Here Branding we have made it our daily task to innovate and execute unique signage and branding concepts. With our unique approach, you will always enjoy superior conceptual interaction, top-quality manufacture, and expert final installation.
+                </p>
+                <p>
+                    We specialize in creating signage &amp; branding concepts from your ideas and transforming those ideas into reality. Our network of industry-leading suppliers and contributors ensures that you get the absolute best for your marketing budget every time.
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/outdoor_digital.webp"
+                alt="dooh billboard" 
+                class="about-img" />
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/ad_plane.webp"
+                alt="advertise here plane" 
+                class="about-img" />
+            </div>
+            <div class="about-text">
+                <h3>Why choose<br/>Advertise Here</h3>
+                <p>
+                    There are many reasons why you should choose Advertise Here as your branding and marketing partner. The obvious reasons like pricing, superior materials, and industry knowledge are no doubt important, and these boxes are all ticked. However, there are 3 BIGGER more important reasons for you to choose Advertise Here as a provider. These reasons will make the key difference in your next campaign and will deliver more than ever before.
+                </p>
+            </div>
+        </div>
+        <div class="content-icons">
+            <div class="icons-wrap">
+                <img src="../../../assets/img/home/imagination.webp" 
+                alt="imagination icon" 
+                class="about-icon" />
+                <h4>IMAGINATION</h4>
+                <p>
+                    When it comes to creating a powerful high impact marketing strategy or branding concept, you need imagination. The ability to see in our MINDS-EYE what you want from your campaign. Our imaginations allow us to not only create what you
+                    are looking for but most importantly innovate new design relationships that will lower your costs and improve the life span of your materials and fabrications. 
+                </p>
+            </div>
+            <div class="icons-wrap">
+                <img src="../../../assets/img/home/direction.webp"
+                alt="direction icon" 
+                class="about-icon" />
+                <h4>APPROACH</h4>
+                <p>
+                    With your concept fully imagined, we will approach the creation of your concept from budget, footprint, and construction. Firstly, we will develop your conceptual vision within your budget. Secondly, we will superimpose your footprint
+                    requirements so that we can adjust accordingly. Finally, we fine-tune the construction of your concept to suit both your budget and your footprint. This 1,2,3 approach will ensure that you get the best from your concept every time
+                    you work with Advertise Here.
+                </p>
+            </div>
+            <div class="icons-wrap">
+                <img src="../../../assets/img/home/truck.webp"
+                alt="truck icon" 
+                class="about-icon" />
+                <h4>DELIVERY</h4>
+                <p>
+                    Delivery is a multi-faceted statement. Firstly, it’s the delivery of your design and campaign specs. Secondly, it’s also making sure that your materials and manufacturing or printing are on schedule. Thirdly, delivery is what we do when
+                    we make sure that each aspect of your marketing campaign or branding exercise comes together in perfect sync and outperforms your expectations. If you want to work with a company that can see what you want and knows just how
+                    to put it all together, you have but to get in touch with Advertise Here. We will deliver your vision to fulfill your strategy on time.
+                </p>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-text">
+                <h3>Our services to you</h3>
+                <p>
+                    We know that every business is unique and may have specific needs. Identifying strategies to market your business can sometimes feel like rocket science. We will help to make the process easier and help your business get the exposure it deserves.
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/hologram.webp"
+                alt="hologram chart" 
+                class="service-img" />
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/company_sign.webp"
+                alt="company sign" 
+                class="service-img" />
+                <div style="width: 100%;">
+                    <div class="link-wrap">
+                        <a routerLink="signage" class="page-link">view content</a>
+                        <a routerLink="signage">
+                            <img src="../../../assets/img/nav/arrow.webp"
+                            alt="arrow" 
+                            class="arrow"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Corporate <span>&amp;</span><br/>Retail Signage</h3>
+                <p>
+                    From fully fabricated custom designs to installations at height and everything in between. Advertise-Here will deliver your signage indoors or outdoors perfectly no matter the design or materials specified.
+                </p>
+                <p>
+                    The multitude of signage types and materials involved with each, means you need a signage specialist at your side to guide you through all the potential challenges.
+                </p>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-text">
+                <h3>Branding</h3>
+                <p>
+                    <em>Promoting your company and brand requires that you have your brand associated with your services and products. So, when you are considering branding various items like your vehicles or clothing, you need to choose the right type and composition to achieve your branding goals.</em>
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/bottle.webp"
+                alt="branded bottle" 
+                class="service-img" />
+                <div style="width: 100%;">
+                    <div class="link-wrap">
+                        <a routerLink="branding" class="page-link">view content</a>
+                        <a routerLink="branding">
+                            <img src="../../../assets/img/nav/arrow.webp"
+                            alt="arrow" 
+                            class="arrow"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/graphic_pad.webp"
+                alt="graphic pad" 
+                class="service-img" />
+                <div style="width: 100%;">
+                    <div class="link-wrap">
+                        <a routerLink="digital" class="page-link">view content</a>
+                        <a routerLink="digital">
+                            <img src="../../../assets/img/nav/arrow.webp"
+                            alt="arrow" 
+                            class="arrow" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Digital Design</h3>
+                <p>
+                    Our services also extend to providing you with digital designs for your online assets. That means you get everything you need for your marketing strategy or initiative in one place. From your social media platforms to your website and much more, our digital design gurus will be able to deliver unmatched designs and concepts.
+                </p>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-text">
+                <h3>Marketing Expertise</h3>
+                <p>
+                    The right agency can not only deliver on a physical sign or branding exercise, but the right agency can also consult with you on the marketing strategy to make the best out of your signage and branding initiatives. The combined expertise
+                    held by the Advertise Here team will most certainly deliver the best physical representation of your marketing ideas. Likewise, you will get innovative input on your strategies every step of the way.
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/home/web.webp"
+                alt="digital marketing" 
+                class="service-img" />
+            </div>
+        </div>
+    </div>
+    <div class="bottom-img-wrap">
+        <img src="../../../assets/img/home/handshake.webp"
+        alt="handshake" 
+        class="bottom-img" />
+    </div>
+</div>

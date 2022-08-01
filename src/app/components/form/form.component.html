@@ -1,1 +1,96 @@
-<p>form works!</p>
+<div class="contact-form">
+    <img src="../../../assets/img/nav/close.webp"
+    (click)="hideForm()"
+    alt="close" 
+    class="exit-btn" />
+    <div *ngIf="formField" class="form-wrap">
+        <form [formGroup]="emailForm" (ngSubmit)="onSubmit(emailForm.value)">
+            <div class="form-group">
+                <textarea
+                type="text"
+                formControlName="aboutClient"
+                placeholder="tell us about yourself... (max characters 300)"
+                [ngClass]="{'is-invalid': submitted && emailForm.controls.aboutClient.errors}"
+                class="form-control about-field" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="reason">How can we help you?</label>
+                <select
+                formControlName="reason"
+                [ngClass]="{'is-invalid': submitted && emailForm.controls.reason.errors}"
+                class="form-control form-select mb3">
+                    <option value="" disabled>Select one...</option>
+                    <option value="I am looking for signage">I am looking for signage</option>
+                    <option value="I am looking for design services ">I am looking for design services </option>
+                    <option value="I am looking for branding and promotional items">I am looking for branding and promotional items</option>
+                    <option value="I would like to arrange a site visit or meeting ">I would like to arrange a site visit or meeting </option>
+                    <option value="I would like to offer my services to you">I would like to offer my services to you</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                formControlName="name"
+                placeholder="name and surname"
+                [ngClass]="{'is-invalid': submitted && emailForm.controls.name.errors}"
+                class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="number">Contact Details</label>
+              <input
+                type="text"
+                formControlName="number"
+                placeholder="telephone / cell number"
+                [ngClass]="{'is-invalid': submitted && emailForm.controls.number.errors}"
+                class="form-control" />
+            </div>
+
+            <div class="form-btn">
+              <button type="submit" class="submit">submit</button>
+            </div>
+        </form>
+        <div class="social-contact">
+            <a href="https://www.linkedin.com/in/advertise-here-97b7b4243/" target="_blank" class="footer-link footer-contact">
+                <p>linkedIn</p>
+                <div class="underline"></div>
+            </a>
+            <a href="https://www.instagram.com/advertisehere_branding/" target="_blank" class="footer-link footer-contact">
+                <p>instagram</p>
+                <div class="underline"></div>
+            </a>
+            <a href="https://www.facebook.com/advertisehere.branding" target="_blank" class="footer-link footer-contact">
+                <p>facebook</p>
+                <div class="underline"></div>
+            </a>
+            <a href="https://twitter.com/AdvertiseHere7" target="_blank" class="footer-link footer-contact">
+                <p>twitter</p>
+                <div class="underline"></div>
+            </a>
+        </div>
+    </div>
+    
+    <div *ngIf="formField" class="call-wrap">
+        <div class="call-text">
+            <h1>We are <span>excited</span><br/>to hear from you</h1>
+            <p>You are welcome to give us a call</p>
+        </div>
+        <button class="call-btn">
+            <a href="tel:+27100857810">Call Us</a>
+        </button>
+        <a href="tel:+27100857810" class="call-us">
+            <h4>+27100857810</h4>
+            <div class="underline"></div>
+        </a>
+    </div>
+
+    <div *ngIf="successMessage" class="success-massage">
+        <h4>Your message has been sent. We will contact you soon.</h4>
+        <div class="alt-btn-wrap">
+            <button (click)="hideForm()" class="alt-btn">continue browsing</button>
+        </div>
+    </div>
+</div>

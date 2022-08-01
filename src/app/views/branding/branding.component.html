@@ -1,1 +1,104 @@
-<p>branding works!</p>
+<div class="branding-container">
+    <div data-poster-url="../../../assets/img/branding/poster_001.webp" 
+    data-video-urls="../../../assets/vid/branding/branding_showreel.webm"
+    data-autoplay="true" 
+    data-loop="true" 
+    data-wf-ignore="true" 
+    class="background-video">
+        <video autoplay="" 
+        loop="" 
+        style="background-image:url(&quot;../../../assets/img/branding/poster_001.webp&quot;)" 
+        muted="" 
+        playsinline=""
+        data-wf-ignore="true" 
+        data-object-fit="cover">
+        <source src="../../../assets/vid/branding/branding_showreel.webm" data-wf-ignore="true"/>
+        </video>
+        <noscript>
+            <style>
+                [data-wf-bgvideo-fallback-img] {
+                    display: none;
+                }
+                @media (prefers-reduced-motion: reduce) {
+                    [data-wf-bgvideo-fallback-img] {
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100vw;
+                    object-fit: cover;
+                    }
+                }
+            </style>
+            <img data-wf-bgvideo-fallback-img="true" src="../../../assets/img/branding/poster_001.webp" alt=""/>
+        </noscript>
+        <div aria-live="polite">
+            <button type="button" 
+            data-w-bg-video-control="true" 
+            aria-controls="56820c09-bcdb-dce7-d26b-2bac192eb1b9-video" 
+            class="video-control">
+                <img src="../../../assets/img/player/pause.svg" alt="Pause video"/>
+                <img hidden="" src="../../../assets/img/player/play.svg" alt="Play video"/>
+            </button>
+        </div>
+    </div>
+    <div class="about-section">
+        <app-header (scroll)="onScroll" [ngClass]="navBarFixed? 'fixed': 'no-fixed'" class="hero-comp"></app-header>
+        <div class="heading">
+            <h2>All your branding needs in one place</h2>
+        </div>
+        <div class="content-wrap">
+            <div class="about-text">
+                <p>
+                    We work with businesses to develop a brand identity that is a unified expression of their unique brand values, personality traits, and aspirations. This enables them to develop a clearly defined position that connects with their customers
+                    and helps them grow their businesses.
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/branding/business_branding.webp" 
+                alt="" 
+                class="service-img" />
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/branding/framed_logo.webp" 
+                alt="" 
+                class="service-img" />
+            </div>
+            <div class="about-text">
+                <h2>Logo Designs</h2>
+                <p>
+                    A high quality logo serves as the foundation for your brand's image. You can expand your business across all channels if you have a credible and consistent brand. Display your logo on your website, social media, and promotional materials.
+                </p>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-text">
+                <h2>Customer Focused</h2>
+                <p>
+                    Companies reach their customers most effectively by establishing a distinct, differentiated identity. Some businesses have been around for a long time but only recently have they become household names. We knew they were there, but it wasn't until the Internet and the rise of e-commerce that they truly penetrated consumer awareness as a great brand.
+                </p>
+            </div>
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/branding/brand_mood_board.webp" 
+                alt="" 
+                class="service-img" />
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="about-img-wrap">
+                <img src="../../../assets/img/branding/roll_up_banner.webp" 
+                alt="" 
+                class="service-img" />
+            </div>
+            <div class="about-text">
+                <h2>Corporate Design</h2>
+                <p>
+                    Corporate identity is only one aspect of corporate branding, specifically the company&#x27;s visible image. As a result, corporate identity is likely to be most visible through corporate design. The company logo, its visual corporate presence
+                    at trade shows, the design of the company website, and the outstanding design features of company merchandise and packaging are all examples of corporate design.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

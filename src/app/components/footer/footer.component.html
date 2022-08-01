@@ -1,1 +1,41 @@
-<p>footer works!</p>
+<app-form *ngIf="contactForm" (onHideForm)="contactForm = !contactForm"></app-form>
+<div class="footer-container">
+    <div class="contact-wrap">
+        <div class="contacts">
+            <h2>Ready to get started?</h2>
+            <div class="button-wrap">
+                <button>Download Profile</button>
+                <button (click)="showForm()" class="alt-btn">get in touch</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <a href="#home-top">
+                <img src="../../../assets/img/nav/logo.webp" 
+                width="136" 
+                sizes="136px" 
+                alt="advertise here logo" 
+                class="image-6"/>
+            </a>
+            <div class="footer-list">
+                    <a href="https://www.linkedin.com/in/advertise-here-97b7b4243/" target="_blank" class="footer-link">
+                        <p>linkedIn</p>
+                        <div class="underline"></div>
+                    </a>
+                    <a href="https://www.instagram.com/advertisehere_branding/" target="_blank" class="footer-link">
+                        <p>instagram</p>
+                        <div class="underline"></div>
+                    </a>
+                    <a href="https://www.facebook.com/advertisehere.branding" target="_blank" class="footer-link">
+                        <p>facebook</p>
+                        <div class="underline"></div>
+                    </a>
+                    <a href="https://twitter.com/AdvertiseHere7" target="_blank" class="footer-link">
+                        <p>twitter</p>
+                        <div class="underline"></div>
+                    </a>
+            </div>
+        </div>
+    </div>
+</div>
