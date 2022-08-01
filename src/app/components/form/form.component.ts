@@ -43,12 +43,12 @@ export class FormComponent implements OnInit {
     this.onHideForm.emit(false);
   }
 
-  onSubmit(/*value:any*/) {
+  onSubmit(value:any) {
  //   this.submitted = true;
  //   if(this.emailForm.invalid) {
     this.formField = false;
     this.successMessage = true;
-    console.log(/*value*/);
+    console.log(value);
    // }
 
    // console.log(/*value*/);
