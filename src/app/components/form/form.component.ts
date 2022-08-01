@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -15,11 +16,11 @@ export class FormComponent implements OnInit {
   formField = true;
   successMessage = false;
 
-  // private sendForm!: AngularFirestoreCollection<any>;
+  private sendForm!: AngularFirestoreCollection<any>;
 
   constructor(
     private formBuilder: FormBuilder,
-   // private firestore: AngularFirestore,
+    private firestore: AngularFirestore,
     ) { }
 
   ngOnInit(): void {
@@ -35,7 +36,7 @@ export class FormComponent implements OnInit {
       reason: ['', Validators.required],
     });
 
-   // this.sendForm = this.firestore.collection('enquiry');
+    this.sendForm = this.firestore.collection('enquiry');
    
   }
 
@@ -44,22 +45,24 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(value:any) {
- //   this.submitted = true;
- //   if(this.emailForm.invalid) {
-    this.formField = false;
-    this.successMessage = true;
-    console.log(value);
-   // }
+    this.submitted = true;
+
+    if(this.emailForm.invalid) {
+      return
+    }
 
    // console.log(/*value*/);
-  /*  this.sendForm.add(value)
+    this.sendForm.add(value)
       .then(res => {
         this.formField = false;
         this.successMessage = true;
       })
       .catch(err => {
         console.log(err);
-      }) */
-  } 
+      }) 
+
+      this.submitted = true;
+  }
+  
 
 }

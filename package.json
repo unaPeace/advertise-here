@@ -24,6 +24,7 @@
     "@angular/router": "~13.3.0",
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@popperjs/core": "^2.10.2",
+    "angularfire2": "^5.4.2",
     "bootstrap": "^5.2.0",
     "firebase": "^9.9.1",
     "ngx-sticky": "^2.0.1",

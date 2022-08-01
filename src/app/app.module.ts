@@ -10,6 +10,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { HomeComponent } from './views/home/home.component';
 import { SignageComponent } from './views/signage/signage.component';
@@ -20,6 +22,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBu58nTx_7Zg_FWUX3XXaP42Pog4RIdcXY",
+  authDomain: "advertise-here-bd0bf.firebaseapp.com",
+  databaseURL: "https://advertise-here-bd0bf-default-rtdb.firebaseio.com",
+  projectId: "advertise-here-bd0bf",
+  storageBucket: "advertise-here-bd0bf.appspot.com",
+  messagingSenderId: "56271848858",
+  appId: "1:56271848858:web:6bd1acdc8543f49c1a2623",
+  measurementId: "G-ZDY582H837"
+};
 
 @NgModule({
   declarations: [
@@ -45,7 +57,8 @@ import { FormComponent } from './components/form/form.component';
     MatInputModule,
     MatButtonModule,
     MatListModule,
-    
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
