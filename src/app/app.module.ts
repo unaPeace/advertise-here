@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -49,6 +50,14 @@ const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'signage', component: SignageComponent },
+      { path: 'branding', component: BrandingComponent },
+      { path: 'digital', component: DigitalComponent },
+      { path: 'case-study', component: CaseStudyComponent },
+    ]),
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,

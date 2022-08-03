@@ -45,9 +45,9 @@ async function sendMail(user, callback) {
             subject: 'Enquiry from website: advertiseherebranding.co.za',
             html: `
             <div>
-                <h1>${user.name}</h1><br/>
+                <h1>${user.name}</h1>
                 <h1>${user.number}</h1><br/>
-                <h2>${user.aboutClient}</h2><br/>
+                <h2>${user.aboutClient}</h2>
                 <h2>${user.reason}</h2>
             </div>
             `,

@@ -1,3 +1,4 @@
+<app-form *ngIf="contactForm" (onHideForm)="contactForm = !contactForm"></app-form>
 <div class="container">
     <app-header (scroll)="onScroll" [ngClass]="navBarFixed? 'fixed': 'no-fixed'" class="hero-comp"></app-header>
     <div id="home-top" class="landing-section">

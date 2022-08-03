@@ -7,6 +7,7 @@ import { Component, Host, HostListener, OnInit, } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   navBarFixed: boolean = false;
+  contactForm = false;
 
   constructor() { }
 
@@ -19,6 +20,10 @@ export class HomeComponent implements OnInit {
     } else {
       this.navBarFixed = false;
     }
+  }
+
+  showForm() {
+    this.contactForm = true;
   }
 
 }
