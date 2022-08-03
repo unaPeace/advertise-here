@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, OnChanges } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { from } from 'rxjs';
+import { from, of, } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { HttpService } from '../../shared/http.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 @Component({
@@ -15,12 +17,15 @@ export class FormComponent implements OnInit {
   submitted = false;
   formField = true;
   successMessage = false;
+  buttonText = "submit";
 
   private sendForm!: AngularFirestoreCollection<any>;
 
   constructor(
     private formBuilder: FormBuilder,
     private firestore: AngularFirestore,
+    public http: HttpService,
+    private spinner: NgxSpinnerService,
     ) { }
 
   ngOnInit(): void {
@@ -37,7 +42,14 @@ export class FormComponent implements OnInit {
     });
 
     this.sendForm = this.firestore.collection('enquiry');
-   
+
+        /** spinner starts on init */
+        this.spinner.show();
+
+        setTimeout(() => {
+          /** spinner ends after 5 seconds */
+          this.spinner.hide();
+        }, 1200);   
   }
 
   hideForm() {
@@ -45,24 +57,48 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(value:any) {
-    this.submitted = true;
+
+    this.buttonText = "•••";
 
     if(this.emailForm.invalid) {
-      return
+      this.buttonText = "error!";
+      this.submitted = false;
+      return 
+    } else {
+      let user = {
+        name: this.emailForm.value.name,
+        number: this.emailForm.value.number,
+        aboutClient: this.emailForm.value.aboutClient,
+        reason: this.emailForm.value.reason,
+      }
+  
+      this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+        data => {
+          let res:any = data; 
+          console.log(
+            `${user.name} sent a message`
+          );
+          this.sendForm.add(value)
+          .then(res => {
+            this.formField = false;
+            this.successMessage = true;
+          })
+          .catch(err => {
+            console.log(err);
+          }) 
+          this.submitted = true;
+        },
+        err => {
+          console.log(err);
+          this.buttonText = "error!";
+          this.submitted = false;
+        },
+        () => {
+          this.buttonText = "submit";
+        }
+      ); 
+     // console.log(/*value*/);
     }
-
-   // console.log(/*value*/);
-    this.sendForm.add(value)
-      .then(res => {
-        this.formField = false;
-        this.successMessage = true;
-      })
-      .catch(err => {
-        console.log(err);
-      }) 
-
-      this.submitted = true;
   }
   
-
 }
