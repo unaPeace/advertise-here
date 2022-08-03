@@ -135,6 +135,12 @@ p {
 
 .carousel-caption p, .carousel-caption h4 {
     color: white;
+    text-shadow: 1.5px 1.5px 1.5px #393939;
+}
+
+.carousel-caption {
+    display: none !important;
+
 }
 
 .h1-large {
@@ -146,5 +152,38 @@ p {
 @media screen and (max-width: 1350px) {
     .about-text {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .content-wrap, .content-icons {
+        flex-direction: column-reverse;
+    }
+
+    .about-img-wrap, .about-text, .icons-wrap {
+        padding: 3em;
+        width: 100vw;
+    }
+    
+    h1 {
+        font-size: 54px;
+    }
+
+    .h1-large {
+        font-size: 12em;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .h1-large {
+        -webkit-text-stroke: 3px #ff4633;
+        font-size: 7.2em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .h1-large {
+        text-align: center;
+        line-height: 1em;
     }
 }

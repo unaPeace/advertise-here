@@ -127,3 +127,24 @@ h2 {
     align-items: center;
     background-color: #1b1b1b;
 }
+
+@media screen and (max-width: 912px) {
+    .footer {
+        width: 90vw;
+    }
+
+    .footer-list {
+        width: 100%;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer-list {
+        gap: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}

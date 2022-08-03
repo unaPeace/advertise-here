@@ -40,6 +40,11 @@
             alt="close" 
             class="exit-btn" />
             <div class="mobile-link">
+                <a [routerLink]="['/']"
+                (click)="hideMenu()">
+                    <p class="page-links">home</p>
+                    <div class="underline"></div>
+                </a>
                 <a [routerLink]="['/signage']"
                 (click)="hideMenu()">
                     <p class="page-links">signage</p>

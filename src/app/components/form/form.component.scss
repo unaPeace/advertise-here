@@ -221,3 +221,25 @@ a:hover {
     border: 3px solid white;
     margin: 0;
 }
+
+@media screen and (max-width: 912px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .form-wrap, .call-wrap {
+        width: 72vw;
+    }
+
+    .success-massage {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .contact-form {
+        padding-top: 6em;
+        overflow-y: scroll;
+        justify-content: flex-start;
+    }
+}

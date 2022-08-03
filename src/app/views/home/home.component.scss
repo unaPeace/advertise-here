@@ -135,6 +135,7 @@ button:active:after {
 }
 
 .heading {
+    text-align: center;
     margin-top: 20vh;
 }
 
@@ -275,5 +276,45 @@ h4 {
 @media screen and (max-width: 1350px) {
     .about-text {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .landing-one {
+        gap: 12em;
+    }
+
+    .landing-two {
+        max-height: 90vh;
+        justify-content: space-between;
+        margin-bottom: 3em;
+    }
+
+    .content-wrap, .content-icons {
+        flex-direction: column;
+    }
+
+    .about-img-wrap, .about-text, .icons-wrap {
+        padding: 3em;
+        width: 100vw;
+    }
+
+    h1 {
+        font-size: 54px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 39px;
     }
 }

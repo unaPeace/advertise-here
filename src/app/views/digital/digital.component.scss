@@ -26,6 +26,11 @@
     transition: 0.03 linear;
 }
 
+.heading {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
 .branding-container {
     box-sizing: border-box;
     margin: 0;
@@ -118,5 +123,20 @@ span {
 @media screen and (max-width: 1350px) {
     .about-text {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .content-wrap, .content-icons {
+        flex-direction: column;
+    }
+
+    .about-img-wrap, .about-text, .icons-wrap {
+        padding: 3em;
+        width: 100vw;
+    }
+    
+    h1 {
+        font-size: 54px;
     }
 }

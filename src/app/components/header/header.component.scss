@@ -112,10 +112,11 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2.1em;
+    gap: 3em;
+    font-size: 3em;
 }
 
-@media screen and (max-width: 840px){
+@media screen and (max-width: 912px){
     .menu-icon {
         display: block;
     }
@@ -123,4 +124,15 @@ a:hover {
     .web-menu {
         display: none;
     }
-  }
+
+    .mobile-link {
+        gap: 1.2em;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .mobile-link {
+        gap: 1.5em;
+        font-size: 2.1em;
+    }
+}

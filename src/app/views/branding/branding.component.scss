@@ -111,3 +111,18 @@ p {
         padding: 0;
     }
 }
+
+@media screen and (max-width: 912px) {
+    .content-wrap, .content-icons {
+        flex-direction: column;
+    }
+
+    .about-img-wrap, .about-text, .icons-wrap {
+        padding: 3em;
+        width: 100vw;
+    }
+    
+    h1 {
+        font-size: 54px;
+    }
+}
