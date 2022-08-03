@@ -29,6 +29,10 @@
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #EEE;
     overflow-x: hidden;
 }
@@ -46,6 +50,7 @@
 
 .content-wrap {
     width: 90%;
+    margin-top: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,8 +129,22 @@ p {
     line-height: 26px;
 }
 
+.carousel {
+    margin-top: 6em;
+}
+
+.carousel-caption p, .carousel-caption h4 {
+    color: white;
+}
+
 .h1-large {
     color: transparent;
     -webkit-text-stroke: 6px #ff4633;
     font-size: 18em;
+}
+
+@media screen and (max-width: 1350px) {
+    .about-text {
+        padding: 0;
+    }
 }
