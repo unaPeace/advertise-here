@@ -140,3 +140,10 @@ span {
         font-size: 54px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    video {
+        height: 100%;
+        width: auto;
+    }
+}
