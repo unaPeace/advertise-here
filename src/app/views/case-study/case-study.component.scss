@@ -44,7 +44,6 @@
     margin: 0;
     background-color: #393939;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -154,6 +153,10 @@ p {
     .about-text {
         padding: 0;
     }
+
+    .h1-large {
+        font-size: 20vw;
+    }
 }
 
 @media screen and (max-width: 912px) {
@@ -169,13 +172,14 @@ p {
     h1 {
         font-size: 54px;
     }
-
-    .h1-large {
-        font-size: 12em;
-    }
 }
 
 @media screen and (max-width: 540px) {
+    .heading {
+        flex-direction: column;
+        gap: 90px;
+    }
+
     .h1-large {
         -webkit-text-stroke: 3px #ff4633;
         font-size: 7.2em;

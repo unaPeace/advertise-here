@@ -52,10 +52,18 @@
     overflow: hidden;
 }
 
-video {
+video.mob-vid {
     height: auto;
     width: 100%;
+    display: none;
 }
+
+video.web-vid {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
 
 .about-section {
     width: 100vw;
@@ -127,6 +135,14 @@ span {
 }
 
 @media screen and (max-width: 912px) {
+    video.web-vid {
+        display: none;
+    }
+
+    video.mob-vid {
+        display: block;
+    }
+
     .content-wrap, .content-icons {
         flex-direction: column;
     }
@@ -138,12 +154,5 @@ span {
     
     h1 {
         font-size: 54px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    video {
-        height: 100%;
-        width: auto;
     }
 }
