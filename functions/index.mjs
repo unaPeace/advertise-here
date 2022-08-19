@@ -40,8 +40,8 @@ async function sendMail(user, callback) {
     let createMail = {
         
             from: `"Website Enquiry"`,
-            to: 'sales@advertiseherebranding.co.za',
-           // to: 'rngobeni303@gmail.com',
+           // to: 'sales@advertiseherebranding.co.za',
+            to: 'rngobeni303@gmail.com',
             subject: 'Enquiry from website: advertiseherebranding.co.za',
             html: `
             <div>

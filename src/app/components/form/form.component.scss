@@ -96,7 +96,20 @@ label {
     overflow-wrap: break-word;
 }
 
-button {
+.call-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.call-btn:hover {
+    background-color: #fff;
+    color: #6b6b6b;
+}
+
+button, .call-btn {
     position: relative;
     top: 30px;
     margin: 30px;
@@ -167,17 +180,6 @@ button:active:after {
     margin-top: 30px;
     color: white;
     font-size: 21px;
-}
-
-.call-btn {
-    width: 100%;
-    margin-top: 0;
-}
-
-.call-btn:hover {
-    a {
-        color: #6b6b6b;
-    }
 }
 
 .call-us {
