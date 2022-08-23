@@ -32,12 +32,18 @@ export class FormComponent implements OnInit {
     this.emailForm = this.formBuilder.group({
       name: ['', Validators.required],
       number: ['', Validators.required],
+      email: ['', 
+        [
+          Validators.required, 
+          Validators.email
+        ]
+      ],
       aboutClient: ['', 
-      [
-        Validators.required,
-        Validators.maxLength(300)
-      ]
-    ],
+        [
+          Validators.required,
+          Validators.maxLength(300)
+        ]
+      ],
       reason: ['', Validators.required],
     });
 
