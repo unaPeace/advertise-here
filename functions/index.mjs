@@ -36,12 +36,16 @@ async function sendMail(user, callback) {
             pass: 'dryuebdbtwjpbffj',
         }
     });
+
+    let emailList = [
+        'sales@advertiseherebranding.co.za',
+        'rngobeni303@gmail.com'
+    ];
     
     let createMail = {
         
-           // from: `"Website Enquiry"`,
-            to: 'sales@advertiseherebranding.co.za',
-            to: 'rngobeni303@gmail.com',
+            from: `"Website Enquiry"`,
+            to: emailList,
             subject: 'Enquiry from website: advertiseherebranding.co.za',
             html: `
             <div>
