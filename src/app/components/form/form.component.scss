@@ -22,6 +22,17 @@ span {
     color: #ff4633;
 }
 
+.whatsapp-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+.whatsapp {
+    width: 30px;
+    height: 30px;
+}
+
 .contact-form {
     position: fixed;
     top: 0;

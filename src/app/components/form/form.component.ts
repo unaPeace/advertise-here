@@ -68,6 +68,10 @@ export class FormComponent implements OnInit {
 
     if(this.emailForm.invalid) {
       this.buttonText = "error!";
+      setTimeout(() => {
+        /** spinner ends after 5 seconds */
+        this.buttonText = "submit";
+      }, 1500); 
       this.submitted = false;
       return 
     } else {
@@ -85,7 +89,7 @@ export class FormComponent implements OnInit {
             `${user.name} sent a message`
           );
           this.sendForm.add(value)
-          .then(res => {
+          .then(_res => {
             this.formField = false;
             this.successMessage = true;
           })
@@ -93,6 +97,8 @@ export class FormComponent implements OnInit {
             console.log(err);
           }) 
           this.submitted = true;
+          this.formField = false;
+          this.successMessage = true;
         },
         err => {
           console.log(err);

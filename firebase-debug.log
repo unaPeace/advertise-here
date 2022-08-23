@@ -1,0 +1,112 @@
+[debug] [2022-08-23T10:21:28.322Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T10:21:28.324Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-23T10:21:28.325Z] CLI Version:   11.4.0
+[debug] [2022-08-23T10:21:28.325Z] Platform:      win32
+[debug] [2022-08-23T10:21:28.325Z] Node Version:  v16.14.0
+[debug] [2022-08-23T10:21:28.337Z] Time:          Tue Aug 23 2022 12:21:28 GMT+0200 (South Africa Standard Time)
+[debug] [2022-08-23T10:21:28.339Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T10:21:28.604Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T10:21:28.606Z] > authorizing via signed-in user (rngobeni303@gmail.com)
+[debug] [2022-08-23T10:21:28.607Z] [iam] checking project advertise-here-bd0bf for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-23T10:21:28.612Z] > refreshing access token with scopes: []
+[debug] [2022-08-23T10:21:28.618Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-08-23T10:21:28.619Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-23T10:21:29.859Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-08-23T10:21:29.859Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-23T10:21:29.888Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/advertise-here-bd0bf:testIamPermissions [none]
+[debug] [2022-08-23T10:21:29.889Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/advertise-here-bd0bf:testIamPermissions x-goog-quota-user=projects/advertise-here-bd0bf
+[debug] [2022-08-23T10:21:29.889Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/advertise-here-bd0bf:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-23T10:21:32.081Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/advertise-here-bd0bf:testIamPermissions 200
+[debug] [2022-08-23T10:21:32.081Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/advertise-here-bd0bf:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-23T10:21:32.083Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/advertise-here-bd0bf/serviceAccounts/advertise-here-bd0bf@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-08-23T10:21:32.083Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/advertise-here-bd0bf/serviceAccounts/advertise-here-bd0bf@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-23T10:21:34.171Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/advertise-here-bd0bf/serviceAccounts/advertise-here-bd0bf@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-08-23T10:21:34.172Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/advertise-here-bd0bf/serviceAccounts/advertise-here-bd0bf@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-23T10:21:34.175Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf [none]
+[debug] [2022-08-23T10:21:35.016Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf 200
+[debug] [2022-08-23T10:21:35.016Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf {"projectId":"advertise-here-bd0bf","projectNumber":"56271848858","displayName":"advertise-here","name":"projects/advertise-here-bd0bf","resources":{"hostingSite":"advertise-here-bd0bf","realtimeDatabaseInstance":"advertise-here-bd0bf-default-rtdb","storageBucket":"advertise-here-bd0bf.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_f7fce324-cf6e-40eb-afac-d9ca490657d3"}
+[info] 
+[info] === Deploying to 'advertise-here-bd0bf'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2022-08-23T10:21:44.619Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf [none]
+[debug] [2022-08-23T10:21:45.401Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf 200
+[debug] [2022-08-23T10:21:45.402Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf {"projectId":"advertise-here-bd0bf","projectNumber":"56271848858","displayName":"advertise-here","name":"projects/advertise-here-bd0bf","resources":{"hostingSite":"advertise-here-bd0bf","realtimeDatabaseInstance":"advertise-here-bd0bf-default-rtdb","storageBucket":"advertise-here-bd0bf.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_f7fce324-cf6e-40eb-afac-d9ca490657d3"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-08-23T10:21:45.411Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-08-23T10:21:45.415Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-08-23T10:21:45.419Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudbuild.googleapis.com [none]
+[debug] [2022-08-23T10:21:45.423Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/artifactregistry.googleapis.com [none]
+[debug] [2022-08-23T10:21:47.575Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/runtimeconfig.googleapis.com 200
+[debug] [2022-08-23T10:21:47.575Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-08-23T10:21:47.642Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudfunctions.googleapis.com 200
+[debug] [2022-08-23T10:21:47.643Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-08-23T10:21:47.663Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/artifactregistry.googleapis.com 200
+[debug] [2022-08-23T10:21:47.663Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-08-23T10:21:47.671Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudbuild.googleapis.com 200
+[debug] [2022-08-23T10:21:47.671Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/advertise-here-bd0bf/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-08-23T10:21:47.674Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf/adminSdkConfig [none]
+[debug] [2022-08-23T10:21:48.852Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf/adminSdkConfig 200
+[debug] [2022-08-23T10:21:48.852Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/advertise-here-bd0bf/adminSdkConfig {"projectId":"advertise-here-bd0bf","databaseURL":"https://advertise-here-bd0bf-default-rtdb.firebaseio.com","storageBucket":"advertise-here-bd0bf.appspot.com","locationId":"us-central"}
+[debug] [2022-08-23T10:21:48.854Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/advertise-here-bd0bf/configs [none]
+[debug] [2022-08-23T10:21:49.799Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/advertise-here-bd0bf/configs 200
+[debug] [2022-08-23T10:21:49.800Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/advertise-here-bd0bf/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-08-23T10:21:49.807Z] Validating nodejs source
+[debug] [2022-08-23T10:21:52.393Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.mjs",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-08-23T10:21:52.394Z] Building nodejs source
+[debug] [2022-08-23T10:21:52.396Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-08-23T10:21:52.999Z] Serving at port 9005
+
+[debug] [2022-08-23T10:21:53.179Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-08-23T10:21:53.699Z] FetchError: request to http://localhost:9005/__/quitquitquit failed, reason: read ECONNRESET
+    at ClientRequest.<anonymous> (C:\nvm\v16.14.0\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:520:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:442:9)
+    at Socket.emit (node:events:520:28)
+    at Socket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.

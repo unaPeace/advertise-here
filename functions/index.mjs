@@ -39,15 +39,15 @@ async function sendMail(user, callback) {
     
     let createMail = {
         
-            from: `"Website Enquiry"`,
-           // to: 'sales@advertiseherebranding.co.za',
+           // from: `"Website Enquiry"`,
+            to: 'sales@advertiseherebranding.co.za',
             to: 'rngobeni303@gmail.com',
             subject: 'Enquiry from website: advertiseherebranding.co.za',
             html: `
             <div>
                 <h1>${user.name}</h1>
                 <h1>${user.number}</h1><br/>
-                <p>About the client</p>
+                <p>Client note</p>
                 <h2>${user.aboutClient}</h2>
                 <p>Reason for reaching out</p>
                 <h2>${user.reason}</h2>
