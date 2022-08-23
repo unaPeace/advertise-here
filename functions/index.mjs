@@ -37,10 +37,10 @@ async function sendMail(user, callback) {
         }
     });
 
-    let emailList = [
-        'sales@advertiseherebranding.co.za',
-        'rngobeni303@gmail.com'
-    ];
+    //let emailList = [
+        //'sales@advertiseherebranding.co.za',
+        //'rngobeni303@gmail.com'
+    //];
     
     let createMail = {
         
