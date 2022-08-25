@@ -78,6 +78,7 @@ export class FormComponent implements OnInit {
       let user = {
         name: this.emailForm.value.name,
         number: this.emailForm.value.number,
+        email: this.emailForm.value.email,
         aboutClient: this.emailForm.value.aboutClient,
         reason: this.emailForm.value.reason,
       }
