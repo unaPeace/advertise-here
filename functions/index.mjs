@@ -51,7 +51,7 @@ async function sendMail(user, callback) {
             html: `
             <div>
                 <h1>${user.name}</h1>
-                <h1>${user.number}</h1><br/>
+                <h1>${user.number}</h1>
                 <h1>${user.email}</h1><br/>
                 <p>Client note</p>
                 <h2>${user.aboutClient}</h2>
