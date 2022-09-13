@@ -89,7 +89,7 @@ export class FormComponent implements OnInit {
           console.log(
             `${user.name} sent a message`
           );
-          this.sendForm.add(value)
+          /*this.sendForm.add(value)
           .then(_res => {
             this.formField = false;
             this.successMessage = true;
@@ -99,7 +99,7 @@ export class FormComponent implements OnInit {
           }) 
           this.submitted = true;
           this.formField = false;
-          this.successMessage = true;
+          this.successMessage = true;*/
         },
         err => {
           console.log(err);
@@ -108,6 +108,9 @@ export class FormComponent implements OnInit {
         },
         () => {
           this.buttonText = "submit";
+          this.submitted = true;
+          this.formField = false;
+          this.successMessage = true;
         }
       ); 
      // console.log(/*value*/);
