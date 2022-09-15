@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
   successMessage = false;
   buttonText = "submit";
 
-  private sendForm!: AngularFirestoreCollection<any>;
+  //private sendForm!: AngularFirestoreCollection<any>;
 
   constructor(
     private formBuilder: FormBuilder,

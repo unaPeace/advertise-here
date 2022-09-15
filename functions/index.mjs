@@ -29,8 +29,8 @@ app.post('/sendmail', (req, res) => {
 async function sendMail(user, callback) {
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        port: 587,
+        secure: false,
         auth: {
             user: 'rngobeni303@gmail.com',
             pass: 'dryuebdbtwjpbffj',
@@ -65,6 +65,4 @@ async function sendMail(user, callback) {
     let info = await transporter.sendMail(createMail);
 
     callback(info);
-    
-    
 }
