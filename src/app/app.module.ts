@@ -25,6 +25,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { ContentfulService } from './services/contentful.service';
+import { MessageService } from './services/message.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBu58nTx_7Zg_FWUX3XXaP42Pog4RIdcXY",
@@ -74,7 +75,7 @@ const firebaseConfig = {
     HttpClientModule,
     NgxSpinnerModule
   ],
-  providers: [ContentfulService],
+  providers: [ContentfulService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

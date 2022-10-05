@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
   successMessage = false;
   buttonText = "submit";
 
-  //private sendForm!: AngularFirestoreCollection<any>;
+  private sendForm!: AngularFirestoreCollection<any>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -47,7 +47,7 @@ export class FormComponent implements OnInit {
       reason: ['', Validators.required],
     });
 
-    //this.sendForm = this.firestore.collection('enquiry');
+    this.sendForm = this.firestore.collection('enquiry');
 
         /** spinner starts on init */
         this.spinner.show();
