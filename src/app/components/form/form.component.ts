@@ -74,7 +74,7 @@ export class FormComponent implements OnInit {
       return 
     } else {
         this.sendForm.add(value).then(res => {
-          console.log(value);
+          console.log('client side works');
           this.buttonText = "submit";
           this.submitted = true;
           this.formField = false;
