@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 });
 
 exports.sendEmail = functions.firestore
-    .document("contact/{contactId}")
+    .document("enquiry/{enquiryId}")
     .onCreate((snap, context) => {
       console.log("email id" + snap.data().email);
       let message = "From: " + snap.data().name +
