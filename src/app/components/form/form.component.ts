@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output, OnChanges } from '@angular/cor
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { from, of, } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { HttpService } from '../../shared/http.service';
 import { NgxSpinnerService } from "ngx-spinner";
 
 
@@ -24,7 +23,6 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private firestore: AngularFirestore,
-    public http: HttpService,
     private spinner: NgxSpinnerService,
     ) { }
 
@@ -75,46 +73,17 @@ export class FormComponent implements OnInit {
       this.submitted = false;
       return 
     } else {
-      let user = {
-        name: this.emailForm.value.name,
-        number: this.emailForm.value.number,
-        email: this.emailForm.value.email,
-        aboutClient: this.emailForm.value.aboutClient,
-        reason: this.emailForm.value.reason,
-      }
-  
-      this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
-        data => {
-          let res:any = data; 
-          console.log(
-            `${user.name} sent a message`
-          );
-          /*this.sendForm.add(value)
-          .then(_res => {
-            this.formField = false;
-            this.successMessage = true;
-          })
-          .catch(err => {
-            console.log(err);
-          }) 
-          this.submitted = true;
-          this.formField = false;
-          this.successMessage = true;*/
-        },
-        err => {
-          console.log(err);
-          this.buttonText = "error!";
-          this.submitted = false;
-        },
-        () => {
+        this.sendForm.add(value).then(res => {
+          console.log(value);
           this.buttonText = "submit";
           this.submitted = true;
           this.formField = false;
           this.successMessage = true;
-        }
-      ); 
+        }).catch(err => {
+          console.log(err);
+        });
+      }
      // console.log(/*value*/);
     }
-  }
   
 }
