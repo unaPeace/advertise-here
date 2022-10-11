@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, OnChanges } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, FormControl, UntypedFormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { from, of, } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { NgxSpinnerService } from "ngx-spinner";
@@ -12,7 +12,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class FormComponent implements OnInit {
   @Output() onHideForm = new EventEmitter<boolean>();
-  emailForm! : FormGroup;
+  emailForm! : UntypedFormGroup;
   submitted = false;
   formField = true;
   successMessage = false;
@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
   private sendForm!: AngularFirestoreCollection<any>;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private firestore: AngularFirestore,
     private spinner: NgxSpinnerService,
     ) { }

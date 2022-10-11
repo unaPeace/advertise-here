@@ -2,6 +2,8 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
 
+// send email function
+
 admin.initializeApp();
 
 var transporter = nodemailer.createTransport({
@@ -47,3 +49,5 @@ exports.sendEmail = functions.firestore
       console.log("Sent!");
     });
   });
+
+  // post to social functions
