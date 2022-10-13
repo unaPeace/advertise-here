@@ -1,6 +1,10 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
+const express = require("express");
+const Instagram = require("instagram-web-api");
+const { EMAIL, EMAIL_PASSWORD, USERNAME, PASSWORD } = process.env;
+require("dotenv").config();
 
 // send email function
 
@@ -11,8 +15,8 @@ var transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "rngobeni303@gmail.com",
-    pass: "dryuebdbtwjpbffj",
+    user: EMAIL_PASSWORD,
+    pass: EMAIL,
   },
 });
 
@@ -51,3 +55,26 @@ exports.sendEmail = functions.firestore
   });
 
   // post to social functions
+
+  const app = express();
+
+  const port = process.env.PORT || 4440;
+
+  app.listen(port, () =>{
+    console.log("Connected!");
+  });
+
+  const instagramLoginFunction = () => {
+    const client = new Instagram({
+      username: USERNAME,
+      password: PASSWORD
+    });
+
+    const instagramPostPictureFunction = async () => {
+      await client.getPhotosByUsername({username: USERNAME}).then((res) => console.log(res));
+    };
+
+    instagramPostPictureFunction()
+  };
+
+  instagramLoginFunction()
