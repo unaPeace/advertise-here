@@ -1,8 +1,6 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const nodemailer = require("nodemailer");
-const express = require("express");
-const Instagram = require("instagram-web-api");
+import { firestore } from "firebase-functions";
+import { admin } from "firebase-admin";
+import { nodemailer } from "nodemailer";
 const { EMAIL, EMAIL_PASSWORD, USERNAME, PASSWORD } = process.env;
 require("dotenv").config();
 
@@ -20,12 +18,12 @@ var transporter = nodemailer.createTransport({
   },
 });
 
-exports.sendEmail = functions.firestore
+export const sendEmail = firestore
   .document("enquiry/{enquiryId}")
   .onCreate((snap, context) => {
     const mailOptions = {
-      from: "rngobeni303@gmail.com",
-      to: "rngobeni303@gmail.com",
+      from: EMAIL,
+      to: EMAIL,
       subject: "Enquiry from website: advertiseherebranding.co.za",
       html: `
         <p>From:</p>
@@ -44,7 +42,6 @@ exports.sendEmail = functions.firestore
         <h5>${snap.data().reason}</h5>
       `,
     };
-
     return transporter.sendMail(mailOptions, (error, data) => {
       if (error) {
         console.log(error);
@@ -53,28 +50,3 @@ exports.sendEmail = functions.firestore
       console.log("Sent!");
     });
   });
-
-  // post to social functions
-
-  const app = express();
-
-  const port = process.env.PORT || 4440;
-
-  app.listen(port, () =>{
-    console.log("Connected!");
-  });
-
-  const instagramLoginFunction = () => {
-    const client = new Instagram({
-      username: USERNAME,
-      password: PASSWORD
-    });
-
-    const instagramPostPictureFunction = async () => {
-      await client.getPhotosByUsername({username: USERNAME}).then((res) => console.log(res));
-    };
-
-    instagramPostPictureFunction()
-  };
-
-  instagramLoginFunction()
