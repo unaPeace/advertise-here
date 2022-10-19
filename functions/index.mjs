@@ -18,28 +18,27 @@ var transporter = nodemailer.createTransport({
   },
 });
 
+let emailList = [
+  "rngobeni"
+];
+
 export const sendEmail = firestore
   .document("enquiry/{enquiryId}")
   .onCreate((snap, context) => {
     const mailOptions = {
       from: EMAIL,
-      to: EMAIL,
+      to: [EMAIL, "leads@advertiseherebranding.co.za"],
       subject: "Enquiry from website: advertiseherebranding.co.za",
       html: `
         <p>From:</p>
         <h1>${snap.data().name}</h1>
-        <br/>
         <h3>${snap.data().email}</h3>
-        <br/>
         <h3>${snap.data().number}</h3>
-        <br/><br/>
+        <br/>
         <p>About prospect:</p> 
-        <br/>
-        <h5>${snap.data().aboutClient}</h5>
-        <br/><br/>
-        <p>About Reason for reaching out:</p> 
-        <br/>
-        <h5>${snap.data().reason}</h5>
+        <h3>${snap.data().aboutClient}</h3>
+        <p>About Reason for reaching out:</p>
+        <h3>${snap.data().reason}</h3>
       `,
     };
     return transporter.sendMail(mailOptions, (error, data) => {
